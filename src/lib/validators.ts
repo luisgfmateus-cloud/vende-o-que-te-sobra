@@ -22,4 +22,7 @@ export const productSchema = z.object({
   type: z.enum(['venda', 'troca']),
   price: z.number().optional(),
   location: z.string().min(3, 'Localização inválida'),
+  latitude: z.number().optional(),
+  longitude: z.number().optional(),
+  images: z.array(z.string()).optional(),
 });
